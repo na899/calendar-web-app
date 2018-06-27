@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <title>Manage your appointments</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+       <header>
+                <nav>
+                        <span> <a method="GET" href="/add">Add new task</a></span>
+                        <span><a method="get"href="/logout">Log-out </a></span>
+
+                </nav>
+
+        </header>
+        <h2>CALENDAR</h2>
+        <form action="/go" method="POST">
+        	<input type="date" name="date" id="date" required="true">
+        	<button onclick="display()" type="submit" >GO </button>
+        </form>
+      
+        <br>
+       
+            
+            <h3><%= date %></h3><br><br>
+        <ul id='show'>     
+            <% for(var i=0;i< tasks.length;i++){%>
+
+          <li>  <strong><%=tasks[i].title%>   :</strong><%=tasks[i].desc%>  <span>  From:</span>
+            <%=tasks[i].start%> To: <%=tasks[i].end%><br></li>
+               <%}%>
+        </ul>
+        
+
+
+        <script type="text/javascript" src="calendar.js"></script>
+        
+
+
+
+       
+</body>
+
+</html>

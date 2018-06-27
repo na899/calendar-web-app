@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <title>Add Task</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+        <header>
+                <nav>
+                        <span><a method="get"href="/logout">Log-out </a></span>
+                        <span><a href="/">Back</a></span>
+                </nav>
+
+        </header>
+        <h2>CALENDAR</h2>
+        <form action="/add" method="POST">
+        <span class="heading">      Title: </span><input class="add" type="text" name="title" id='title' placeholder="Title" required="true"><br><br>
+        <span class="heading" >Description: </span><textarea class="add" value='---'rows="" cols="45" placeholder="Description" name="desc" id='desc'></textarea><br><br>	<br>
+        <span class="heading">       Date:  </span>
+        <input class="add" type="date" name="date" id='date' required="true"><br><br>
+        <span class="heading"> Start Time:</span><input class="add" type="time" name="start" id='start' placeholder="Start time" required="true"><br><br>
+        <span class="heading">   End Time:</span><input class="add" type="time" name="end" id='end' placeholder="End time" required="true"><br><br>
+       
+        <button>ADD TASK</button>
+         </form>
+        
+
+           
+
+
+
+       
+</body>
+
+</html>
